@@ -10,12 +10,7 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.babel([
-    'app/javascript/src/app.js',
-    'app/javascript/src/hamburger.js',
-], 'app/javascript/dist/app.js')
-    .sass('app/css/src/app.scss', 'app/css/dist/')
-    .sass('app/css/src/editor.scss', 'app/css/dist/')
+mix.sass('styles/src/app.scss', 'assets/')
     .options({
         postCss: [
             require('mqpacker')({sort: true}),    // Combines MediaQueries
