@@ -56,3 +56,10 @@ body {
         padding-bottom: 65px;
     }
 }
+
+.content-container {
+
+    @include media($breakpoint-medium) {
+        max-width: 800px;
+    }
+}

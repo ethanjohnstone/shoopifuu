@@ -352,6 +352,17 @@ img.center {
   margin-bottom: 20px;
 }
 
+a {
+  color: #4C545C;
+  transition: color 0.3s ease-in-out;
+}
+a:hover {
+  color: #D76424;
+}
+a:focus {
+  color: #BACBD5;
+}
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -1209,6 +1220,24 @@ img.center {
   transform: rotate(-90deg);
 }
 
+.button {
+  background-color: #D76424;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px;
+  width: 100%;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  line-height: 16px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.button:hover {
+  background-color: #70818F;
+  color: white;
+}
+
 .header {
   border-bottom: 1px solid #EAEAEA;
 }
@@ -1276,6 +1305,13 @@ img.center {
   margin-top: 1rem;
 }
 
+.contact-container {
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 20px 60px;
+}
+
 @media screen and (min-width: 600px) {
   .u-container {
     padding-left: 40px;
@@ -1288,6 +1324,9 @@ img.center {
   .u-spacing--y {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+  .content-container {
+    max-width: 800px;
   }
   .h1 {
     font: 400 30px/38px "Avenir", sans-serif;
@@ -1306,6 +1345,9 @@ img.center {
   }
   .p3 {
     font: 400 13px/16px "Avenir", sans-serif;
+  }
+  .button {
+    max-width: 270px;
   }
   .header__logo {
     margin-left: 40px;

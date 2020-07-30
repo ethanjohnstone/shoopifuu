@@ -1,0 +1,22 @@
+.button {
+    background-color: $color-button-bg;
+    color: $color-button-color;
+    text-transform: uppercase;
+    padding: 20px;
+    width: 100%;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 16px;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+    @include media($breakpoint-medium) {
+        max-width: 270px;
+    }
+
+    &:hover {
+        background-color: $color-button-bg-hover;
+        color: $color-button-color-hover;
+    }
+}

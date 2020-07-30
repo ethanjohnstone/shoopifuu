@@ -84,3 +84,16 @@ img.center {
   margin-right: auto;
   margin-bottom: 20px;
 }
+
+a {
+    color: $color-link;
+    transition: color .3s ease-in-out;
+
+    &:hover {
+        color: $color-link-hover;
+    }
+
+    &:focus {
+        color: $color-link-focussed;
+    }
+}
