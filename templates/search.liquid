@@ -1,3 +1,4 @@
+<div class="u-container">
 {% paginate search.results by 10 %}
   <form action="/search" method="get" role="search">
     <input type="search" name="q" value="{{ search.terms | escape }}">
@@ -20,3 +21,4 @@
 
   {% if paginate.pages > 1 %}{{ paginate | default_pagination }}{% endif %}
 {% endpaginate %}
+</div>

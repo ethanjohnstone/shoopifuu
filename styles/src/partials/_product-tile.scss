@@ -1,0 +1,27 @@
+.product-tile {
+    margin-bottom: 15px;
+
+    a {
+        display: block;
+    }
+
+    @include media($breakpoint-large) {
+        width: calc(25% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.product-tile__title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.products-container {
+    @include media($breakpoint-large) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+}
