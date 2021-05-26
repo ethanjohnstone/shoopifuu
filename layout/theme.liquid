@@ -12,48 +12,44 @@
   {{ 'application.js' | asset_url | script_tag }}
 </head>
 <body>
-
-   <div class="u-container">
-       <ul>
-         {% for link in linklists.main-menu.links %}
-           {% assign child_list_handle = link.title | handleize %}
-           {% if linklists[child_list_handle].links != blank %}
-           <li>
-             <a href="{{ link.url }}">{{ link.title }}</a>
-             <ul>
-               [{% for childlink in linklists[child_list_handle].links %}
-               <li>
-               <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
-               </li>
-               {% endfor %}]
-             </ul>
-           </li>
-           {% else %}
-           <li>
-             <a href="{{ link.url }}">{{ link.title }}</a>
-             </li>
-           {% endif %}
-         {% endfor %}
-         <li>
-         <a href="/cart">cart</a>
-         </li>
-         {% if shop.customer_accounts_enabled %}
-              {% if customer %}
-                <li><a href="/account">account</a></li>
-                <li>{{ 'log out'  | customer_logout_link }}</li>
-              {% else %}
-                <li>{{ 'log in ' | customer_login_link }}</li>
-                <li>{{ 'register' | customer_register_link }}</li>
-              {% endif %}
+  <div class="header">
+    <div class="header__container">
+        <ul class="header__links">
+          {% for link in linklists.main-menu.links %}
+            {% assign child_list_handle = link.title | handleize %}
+            {% if linklists[child_list_handle].links != blank %}
+            <li class="header__link">
+              <a href="{{ link.url }}">{{ link.title }}</a>
+              <ul>
+                [{% for childlink in linklists[child_list_handle].links %}
+                <li>
+                <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                </li>
+                {% endfor %}]
+              </ul>
+            </li>
+            {% else %}
+            <li class="header__link">
+              <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
             {% endif %}
-         </ul>
+          {% endfor %}
+          <li>
+          <a href="/cart">cart</a>
+          </li>
+          {% if shop.customer_accounts_enabled %}
+                {% if customer %}
+                  <li><a href="/account">account</a></li>
+                  <li>{{ 'log out'  | customer_logout_link }}</li>
+                {% else %}
+                  <li>{{ 'log in ' | customer_login_link }}</li>
+                  <li>{{ 'register' | customer_register_link }}</li>
+                {% endif %}
+              {% endif %}
+          </ul>
 
-   </div>
-
-
-
-
-
+    </div>
+  </div>
   <main role="main">
     {{ content_for_layout }}
   </main>

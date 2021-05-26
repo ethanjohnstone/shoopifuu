@@ -143,9 +143,6 @@ input[type=color]::-moz-placeholder, input[type=date]::-moz-placeholder, input[t
 input[type=color]:-ms-input-placeholder, input[type=date]:-ms-input-placeholder, input[type=datetime]:-ms-input-placeholder, input[type=datetime-local]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=month]:-ms-input-placeholder, input[type=number]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=search]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, input[type=text]:-ms-input-placeholder, input[type=time]:-ms-input-placeholder, input[type=url]:-ms-input-placeholder, input[type=week]:-ms-input-placeholder, input:not([type]):-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder {
   color: tint(#58595B, 40%);
 }
-input[type=color]::-ms-input-placeholder, input[type=date]::-ms-input-placeholder, input[type=datetime]::-ms-input-placeholder, input[type=datetime-local]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=month]::-ms-input-placeholder, input[type=number]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder, input[type=search]::-ms-input-placeholder, input[type=tel]::-ms-input-placeholder, input[type=text]::-ms-input-placeholder, input[type=time]::-ms-input-placeholder, input[type=url]::-ms-input-placeholder, input[type=week]::-ms-input-placeholder, input:not([type])::-ms-input-placeholder, textarea::-ms-input-placeholder, select::-ms-input-placeholder {
-  color: tint(#58595B, 40%);
-}
 input[type=color]::placeholder,
 input[type=date]::placeholder,
 input[type=datetime]::placeholder,
@@ -381,9 +378,7 @@ a:focus {
   padding: 0px 0px;
   display: inline-block;
   cursor: pointer;
-  transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
-  transition-property: opacity, filter, -webkit-filter;
   transition-duration: 0.15s;
   transition-timing-function: linear;
   font: inherit;
@@ -1247,8 +1242,6 @@ a:focus {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 25px;
-  padding-bottom: 25px;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;

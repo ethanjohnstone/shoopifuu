@@ -1,6 +1,6 @@
 development:
-  password:
-  theme_id:
-  store:
+  password: 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
+  theme_id: 123467530437
+  store: ethn-dev.myshopify.com
   ignore_files:
     - config/settings_data.json
